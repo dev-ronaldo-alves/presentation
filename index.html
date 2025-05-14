@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronaldo da Silva Alves | Portfolio Trilingue</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfólio profissional de Ronaldo da Silva Alves - Especialista em Soluções Inovadoras">
+    <meta name="keywords" content="Portfólio, Desenvolvedor, Gestão de Projetos, Rio de Janeiro">
+    <meta name="author" content="Ronaldo da Silva Alves">
+    <meta property="og:image" content="assets/og-image.jpg">
+    
+    <!-- PWA Config -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2A2A72">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="fade-in">
+        <div class="controls">
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="pt"><img width="30" height="30" src="https://img.icons8.com/color/30/brazil-circular.png" alt="brazil-circular"/></button>
+                <button class="lang-btn" data-lang="en"><img width="30" height="30" src="https://img.icons8.com/color/30/great-britain-circular.png" alt="great-britain-circular"/></button>
+                <button class="lang-btn" data-lang="es"><img width="30" height="30" src="https://img.icons8.com/color/30/spain2-circular.png" alt="spain2-circular"/></button>
+            </div>
+            <button class="theme-toggle"><img width="30" height="30" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/30/external-paintbrush-construction-flaticons-lineal-color-flat-icons.png" alt="external-paintbrush-construction-flaticons-lineal-color-flat-icons"/></button>
+        </div>
+
+        <h1 data-translate="name">Ronaldo da Silva Alves</h1>
+        <p data-translate="title">Especialista em Soluções Inovadoras</p>
+        <div class="social-links">
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon" aria-label="Medium"><i class="fab fa-medium"></i></a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section fade-in" id="profile">
+            <h2>Foto do Perfil</h2>
+            <img src="./assets/perfil.png" alt="Foto de Ronaldo da Silva Alves" class="profile-image">
+        </section>
+
+        <section data-translate="skills-list" class="section fade-in" id="skills">
+            <h2>Habilidades</h2>
+            <ul class="skills-list">
+                <li>Desenvolvimento Web (HTML, CSS, JavaScript, React)</li>
+                <li>Gestão de Projetos (Scrum, Kanban)</li>
+                <li data-translate="skills-3">Banco de Dados (SQL, NoSQL)</li>
+                <li data-translate="skills-4">Design Responsivo e UX/UI</li>
+            </ul>
+        </section>
+
+        <section class="section fade-in" id="experience">
+            <h2 data-translate="#">Experiências</h2>
+            <p data-translate="#">Desenvolvedor Full Stack - XYZ Tech (2020 - Presente)</p>
+            <p data-translate="#">Gerente de Projetos - ABC Solutions (2017 - 2020)</p>
+        </section>
+
+        <section class="section fade-in" id="certificates">
+            <h2 data-translate="#">Certificados e Cursos</h2>
+            <ul>
+                <li data-translate="#">Certificado Full Stack - Udemy (2023)</li>
+                <li data-translate="#">Gestão Ágil de Projetos - Coursera (2022)</li>
+                <li data-translate="#">Banco de Dados Avançado - Alura (2021)</li>
+            </ul>
+        </section>
+
+        <section class="section fade-in" id="portfolio">
+            <h2>Portfólio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="./assets/project.png" alt="Projeto 1">
+                    <p>Sistema de Gestão de Vendas</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/project.png" alt="Projeto 2">
+                    <p>Landing Page para Café</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="./assets/project.png" alt="Projeto 3">
+                    <p>Aplicativo de Controle Financeiro</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

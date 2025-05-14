@@ -1,0 +1,20 @@
+{
+    "name": "Portfólio Ronaldo Alves",
+    "short_name": "Portfolio",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#2A2A72",
+    "theme_color": "#009FFD",
+    "icons": [
+        {
+            "src": "icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}

@@ -1,0 +1,208 @@
+:root {
+    /* Light Theme */
+    --primary: #2A2A72;
+    --secondary: #009FFD;
+    --accent: #FFA400;
+    --background: #F5F5F5;
+    --text: #2B2D42;
+    --background-section: #fff; /* Nova variável para seções */
+    --item-hover: rgba(0, 0, 0, 0.03); /* Cor para hover dos itens */
+}
+
+[data-theme="dark"] {
+    --primary: #009FFD;
+    --background: #1A1A2E;
+    --text: #EDF2F4;
+    --background-section: #2A2A72; /* Ajuste para dark mode */
+    --item-hover: rgba(255, 255, 255, 0.05); /* Ajuste de hover para dark */
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui;
+    transition: 
+        background-color 0.3s ease,
+        color 0.2s ease,
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Transição mais suave */
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 20px;
+    text-align: content;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Transição suave para dark mode */
+}
+
+.controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+.lang-btn, .theme-toggle {
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 14px;
+    transition: 
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease; /* Transição para efeito de foco */
+}
+
+.lang-btn:hover, .theme-toggle:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.lang-btn.active {
+    border-color: var(--accent);
+    box-shadow: 0 0 8px rgba(255, 164, 0, 0.3); /* Destaque para idioma ativo */
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    background-color: var(--background-section); /* Usando variável nova */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    margin-bottom: 20px;
+    transition: 
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid var(--accent); /* Destaque para a foto */
+}
+
+.skills-list, .experience-list, .certificates-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li, .experience-list li, .certificates-list li {
+    background-color: var(--background);
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    transition: 
+        background-color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.skills-list li:hover, 
+.experience-list li:hover, 
+.certificates-list li:hover {
+    transform: translateX(5px); /* Efeito de hover sutil */
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px; /* Espaçamento maior entre itens */
+}
+
+.portfolio-item {
+    background-color: var(--background-section);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: 
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { 
+    animation: fadeIn 0.8s ease-out forwards; 
+}
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Curva de animação melhorada */
+}
+
+.scroll-animation.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .controls {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .lang-btn, .theme-toggle {
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    .section {
+        padding: 25px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Ajustes específicos para dark mode */
+[data-theme="dark"] {
+    .skills-list li, 
+    .experience-list li, 
+    .certificates-list li {
+        background-color: rgba(255, 255, 255, 0.05); /* Melhor contraste */
+    }
+    
+    .portfolio-item {
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    .section {
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    }
+}
